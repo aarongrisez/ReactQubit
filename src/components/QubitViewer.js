@@ -1,7 +1,7 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
 
-export default class App extends React.Component {
+export default class QubitViewer extends React.Component {
 
     constructor(props) {
       super(props);
@@ -90,9 +90,9 @@ export default class App extends React.Component {
         },
         ], 
         layout: {
-          width: 500,
+          showlegend: false,
+          width: 900,
           height: 600, 
-          title: 'A Fancy Plot',
           scene: {
             xaxis: {
               visible: false,
@@ -106,16 +106,17 @@ export default class App extends React.Component {
           },
         }, 
       }
-      console.log(this.state.data);
     }
+
     render() {
       return (
-        <Plot
-          data={this.state.data}
-          layout={this.state.layout}
-          onInitialized={(figure) => this.setState(figure)}
-          onUpdate={(figure) => this.setState(figure)}
-        />
+          <Plot
+            data={this.state.data}
+            layout={this.state.layout}
+            onInitialized={(figure) => this.setState(figure)}
+            onUpdate={(figure) => this.setState(figure)}
+          />
       );
     }
   }
+

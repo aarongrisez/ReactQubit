@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './App';
+import QubitViewer from './QubitViewer';
 import { storiesOf } from '@storybook/react';
 //import { action } from '@storybook/addon-actions';
 
@@ -11,5 +11,5 @@ export const app = {
   state: 'APP_STATE',
 };
 
-storiesOf('App', module)
-  .add('default', () => <App x = {data['x']} y = {data['y']} z = {data['z']} r = {1} theta = {15} phi = {4} />)
+storiesOf('QubitViewer', module)
+  .add('default', () => <QubitViewer x = {data['x']} y = {data['y']} z = {data['z']} r = {1} theta = {15} phi = {4} />)
